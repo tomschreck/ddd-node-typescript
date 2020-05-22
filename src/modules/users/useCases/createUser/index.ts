@@ -4,11 +4,10 @@ import { CreateUserUseCase } from "./CreateUserUseCase";
 import { userRepo } from "../../repos";
 
 const createUserUseCase = new CreateUserUseCase(userRepo);
-const createUserController = new CreateUserController(
-  createUserUseCase
-)
+const createUserController = new CreateUserController(createUserUseCase);
 
-export {
+export
+{
   createUserUseCase,
   createUserController
 }
